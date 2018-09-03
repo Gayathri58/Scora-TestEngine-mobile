@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="16dp"
+            tools:context=".dashboard.DashboardFragment">
+
+            <TextView
+                android:id="@+id/preform_summary"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="@string/performance_summary"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/test_summary_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="@string/test_summary"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/drill_down_test_summary"
+                    android:src="@drawable/drill_icon"
+                    android:layout_marginLeft="285dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="285dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/test_summary_pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginStart="275dp"
+                    android:src="@drawable/backbutton"
+                    android:text="Back"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/test_summary_click_rec_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/preformance_analysis_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="@string/performance_analysis"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/drill_down_performance_analysis"
+                    android:src="@drawable/drill_icon"
+                    android:layout_marginLeft="285dp"
+                    android:layout_marginStart="285dp"
+                    android:visibility="gone"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/preformance_barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/test_performance_back_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginStart="275dp"
+                    android:src="@drawable/backbutton"
+                    android:text="Back"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/test_performance_attempts_line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/test_group_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="@string/test_group"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/drill_down_test_group"
+                    android:src="@drawable/drill_icon"
+                    android:layout_marginLeft="285dp"
+                    android:layout_marginStart="285dp"
+                    android:visibility="gone"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/test_group_pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/test_group_back_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginStart="275dp"
+                    android:src="@drawable/backbutton"
+                    android:text="Back"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/test_group_preformance_barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_insufficient_data"
+                    android:id="@+id/test_group_no_data_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+                <TextView
+                    android:id="@+id/recent_activity_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="@string/recent_activity"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/drill_down_activity_log"
+                    android:src="@drawable/drill_icon"
+                    android:layout_marginLeft="285dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="285dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/rec_activity_line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/recent_activity_back_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginStart="275dp"
+                    android:src="@drawable/backbutton"
+                    android:text="Back"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/recect_activity_performance_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_dash_board"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/no_chart_data_icon"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_no_chart_data_analysis"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/no_chart_data_tv"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:gravity="center"
+                android:textColor="#A5A5A5"
+                android:text="No Charts Available"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/page_not_found_icon"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_page_not_found"
+                android:layout_width="220dp"
+                android:layout_height="190dp" />
+
+            <ImageView
+                android:id="@+id/bad_request_icon_dashboard"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/ic_bad_request"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/server_error_icon_dashboard"
+                android:layout_width="170dp"
+                android:layout_height="130dp"
+                android:src="@drawable/ic_server_error"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

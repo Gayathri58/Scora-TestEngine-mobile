@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+           <ProgressBar
+               android:id="@+id/area_chart_progress_bar"
+               android:visibility="visible"
+               style="?android:attr/progressBarStyleLarge"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/test_history_difficult_level_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/difficulty"
+                android:textColor="@color/color_black" />
+
+            <TextView
+                android:id="@+id/difficulty_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:gravity="center"
+                android:text="@string/attempts" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/test_history_attempt_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bcbcbc" />
+
+            <TextView
+                android:id="@+id/difficulty_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:gravity="center"
+                android:text="@string/score" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/test_history_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/test_history_taxonomy_level_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="@string/taxonomy"
+                android:textColor="#333" />
+
+            <TextView
+                android:id="@+id/taxonomy_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/attempts" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/taxonomy_count_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bcbcbc" />
+
+            <TextView
+                android:id="@+id/taxonomy_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/score" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/taxonomy_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/test_history_topic_level_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="@string/topic"
+                android:textColor="#333" />
+
+            <TextView
+                android:id="@+id/topic_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/attempts" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/topic_count_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bcbcbc" />
+
+            <TextView
+                android:id="@+id/topic_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/score" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/topic_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/strong_weak_area_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="@string/strong_weak"
+                android:textColor="#333" />
+
+            <TextView
+                android:id="@+id/strong_area_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/strong" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/strong_area_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bcbcbc" />
+
+            <TextView
+                android:id="@+id/weak_area_tv"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:text="@string/weak" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/weak_area_chart"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bcbcbc" />
+
+            <TextView
+                android:id="@+id/test_history_score_board_lable"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="@string/score_board"
+                android:textColor="#333" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/scoreboard_table_rv"
+                    android:layout_width="match_parent"
+                   android:layout_marginBottom="8dp"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

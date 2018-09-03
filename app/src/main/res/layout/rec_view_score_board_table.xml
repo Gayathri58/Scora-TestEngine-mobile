@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="7dp"
+        android:layout_margin="4dp"
+        android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/scoreboard_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+
+            android:background="@color/color_table_head">
+
+            <TextView
+                android:id="@+id/scoreboard_header_testname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Test Name"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_attempts_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Attempt"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_sectionname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Section Name"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_no_of_items_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No.of Items"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+
+            android:background="@color/color_table_row">
+
+            <TextView
+                android:id="@+id/scoreboard_testname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_attempts_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_sectionname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_no_of_items_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank" />
+
+        </TableRow>
+
+        <TableRow
+
+            android:background="@color/color_table_head">
+
+            <TextView
+                android:id="@+id/scoreboard_header_max_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max Score"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_present_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Percent Score"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:background="@color/color_table_row">
+
+            <TextView
+                android:id="@+id/scoreboard_max_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_present_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color_blank" />
+
+
+        </TableRow>
+
+        <TableRow android:background="@color/color_table_head">
+
+            <TextView
+                android:id="@+id/scoreboard_header_incorrent_items_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Incorrect items"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_corrent_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correct items"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scoreboard_header_missed_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Missed items"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow android:background="@color/color_table_row">
+
+            <TextView
+                android:id="@+id/scoreboard_incorrent_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_corrent_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank" />
+
+            <TextView
+                android:id="@+id/scoreboard_missed_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_blank" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

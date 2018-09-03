@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Pika</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="forgot_password">ForgotPasswordActivity</string>
+    <string name="instructions">Instructions</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Dashboard</item>
+        <item>Scheduled Test</item>
+        <item>Test History</item>
+        <item>Settings</item>
+        <item>Log Out</item>
+    </string-array>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login activity-->
+    <string name="prompt_email">E-mail Id </string>
+    <string name="prompt_password">Password</string>
+
+    <string name="action_sign_in">Log in</string>
+    <string name="action_sign_in_short">Done</string>
+
+    <string name="action_forgot_password">Forgot Password?</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Strings related to forgot_password activity-->
+    <string name="prompt_forgot_password_email">E-mail Id</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_forgot_pwd_short">Done</string>
+
+    <!-- Strings related to Performance Insights Fragment-->
+    <string name="filter_by_test_name"> Filter By Test Name</string>
+    <string name="filter_by_attempt"> Filter By Attempt</string>
+    <string name="filter_panel">Filter Panel</string>
+
+    <!-- Strings related to Dash Board Fragment-->
+    <string name="performance_summary">Performance Summary</string>
+    <string name="test_summary">Test Summary</string>
+    <string name="performance_analysis">Performance Analysis (Recent 5 Test)</string>
+    <string name="test_group">Test Vs Group</string>
+    <string name="recent_activity">Recent Activity (Recent 5 Test)</string>
+
+    <string name="difficulty">Difficulty Level</string>
+    <string name="attempts">Attempt</string>
+    <string name="score">Score</string>
+    <string name="taxonomy">Taxonomy</string>
+    <string name="topic">Topic</string>
+    <string name="strong_weak">Strong Area and Weak Area</string>
+    <string name="strong">Strong Area</string>
+    <string name="weak">Weak Area</string>
+    <string name="score_board">Scoreboard Table</string>
+
+
+    <string name="no_items">NO ITEMS FOR THIS FILTER</string>
+    <string name="show_palette">SHOW PALETTE</string>
+    <string name="no_question_items">Since applied filter combination has no values, please alter your filter options</string>
+    <string name="play_video">PLAY VIDEO</string>
+    <string name="unicode">U+0040</string>
+    <string name="mark_review_and_next">MARK REVIEW</string>
+    <string name="save_and_next">Save and Next</string>
+    <string name="submit_text">Submit</string>
+
+    <string name="timer_text">timer</string>
+    <string name="pause_confirmation">Do you want pause the test</string>
+    <string name="submit_confirmation">Do you Want submit the test</string>
+
+    <string name="data_set_change">DATA SET CHANGE</string>
+</resources>

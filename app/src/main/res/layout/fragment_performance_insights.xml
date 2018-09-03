@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:weightSum="2"
+                tools:context=".performance_insights.PerformanceInsightsFragment">
+
+                <TextView
+                    android:id="@+id/filter_testname_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:text="@string/filter_by_test_name" />
+
+                <TextView
+                    android:id="@+id/filter_attempts_count_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:text="@string/filter_by_attempt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/spinner_test_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_attempt_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_insights"
+                style="?android:attr/progressBarStyleLarge"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/insights_difficulty_tv"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/difficulty"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/insights_difficulty_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/attempts"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_difficulty_level_count_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/difficulty_count_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_difficulty_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/score"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_difficulty_level_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/difficulty_score_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_taxonomy_tv"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/taxonomy"
+                android:visibility="visible"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/insights_taxonomy_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/attempts"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_taxonomy_level_count_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/taxonomy_count_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_taxonomy_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/score"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_taxonomy_level_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/taxonomy_score_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_topic_tv"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="@string/topic"
+                android:visibility="visible"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/insights_topic_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/attempts"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_topic_level_count_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/topic_count_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_topic_score_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/score"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_topic_level_score_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/topic_score_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_strong_weak_tv"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:text="@string/strong_weak"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/insights_strong_area_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/strong"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_strong_area_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/strong_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_weak_area_tv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/weak"
+                android:visibility="visible" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/insights_weak_area_chart"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/weak_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/insights_score_board_lable"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/score_board"
+               android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/scoreboard_table_rv"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/score_board_icon"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_insufficient_data"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/no_data_insghts"
+                android:src="@drawable/ic_no_chart_data_analysis"
+                android:layout_width="170dp"
+                android:visibility="gone"
+                android:layout_height="170dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/no_data_history_tv"
+                android:textColor="#A5A5A5"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="No Chats Available"
+                android:layout_width="match_parent"
+                android:layout_height="22dp" />
+
+            <ImageView
+                android:id="@+id/page_not_found_icon_insights"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_page_not_found"
+                android:layout_width="220dp"
+                android:layout_height="190dp" />
+
+            <ImageView
+                android:id="@+id/bad_request_icon_dashboard_insights"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/ic_bad_request"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/server_error_icon_dashboard_insights"
+                android:layout_width="170dp"
+                android:layout_height="130dp"
+                android:src="@drawable/ic_server_error"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

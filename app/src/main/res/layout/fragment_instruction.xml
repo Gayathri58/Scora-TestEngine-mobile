@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".test_instruction.InstructionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/rules_instruction_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/accept_chk_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="47dp"
+            android:text="I Agree the terms and conditions" />
+
+        <TextView
+            android:background="@drawable/btn_back_bg"
+            android:id="@+id/ready_to_begin"
+            android:textColor="@color/text_color_blank"
+            android:text="I ready to begin"
+            android:layout_width="100dp"
+            android:layout_height="25sp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="17dp"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_take_take_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_take_test"
+            class = "com.brigita.dashboard.pika.take_test.TakeTestFragment"/>
+
+        <ProgressBar
+            android:id="@+id/instruction_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+</layout>

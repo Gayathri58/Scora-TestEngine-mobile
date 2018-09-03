@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".take_test.TakeTestFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/headerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            card_view:cardElevation="10dp">
+
+            <TableLayout
+                android:id="@+id/headerControlId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <ImageView
+                        android:id="@+id/org_icon_take_test"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/submit_tv_taketest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:layout_gravity="end"
+                        android:paddingStart="0dp"
+                        android:gravity="center"
+                        android:paddingLeft="0dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Submit"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_span="6" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="2dp">
+
+                    <ImageView
+                        android:id="@+id/selectQuestionId"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu" />
+
+                    <TextView
+                        android:id="@+id/currentAndTotalId"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="questions"
+                        android:textColor="#ffffffff"
+                        android:textSize="16sp" />
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/timerColId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/pause"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/pause"
+                        android:text="timer"
+                        android:textColor="#ffffffff"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sectionsId"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:overlapAnchor="false"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/directiveSpecId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <com.brigita.dashboard.pika.util.SwipeDisabledViewPager
+                android:id="@+id/questionPagerId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mobQuestionPagerId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Sheet Layout -->
+    <RelativeLayout
+        android:id="@+id/relativeBottomId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- Footer Layout -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/footerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            card_view:cardElevation="10dp">
+
+            <TableLayout
+                android:id="@+id/footerControlId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/previousIconId"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_weight="1"
+                        android:src="@drawable/previous_24px" />
+
+                    <ImageButton
+                        android:id="@+id/markForReviewIconId"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_weight="1"
+                        android:src="@drawable/mark_for_review_icon" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#fff" />
+
+                    <ImageButton
+                        android:id="@+id/clearUserSelectionId"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_weight="1"
+                        android:src="@drawable/eraser32" />
+
+                    <!--<include layout="@layout/te_save_next_layout"/>-->
+                    <ImageButton
+                        android:id="@+id/saveNextIconId"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_weight="1"
+                        android:src="@drawable/next_24px" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_test"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</android.support.design.widget.CoordinatorLayout>
+</layout>

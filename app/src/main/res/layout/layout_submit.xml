@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testSubmitId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textColor="#ffffffff"
+    android:layout_gravity="end"
+    android:paddingStart="0dp"
+    android:paddingLeft="0dp"
+    android:paddingEnd="10dp"
+    android:paddingRight="10dp"
+    android:onClick="confirmAndFinish"
+    android:text="Submit"/>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_weight="0"
+            android:background="#8f9898"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/only_question_palette"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Questions"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/question_palette_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Palette"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/instruction_tv_palette"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Instructions"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/qpalette"
+                    android:layout_width="385dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/gridLinearId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/no_items_viewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_items"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/linerQuestion"
+                        android:background="#f4f4f4"/>
+
+                        <TableLayout
+                            android:id="@+id/table_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                    <TextView
+                        android:id="@+id/rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/only_question_rec_view"
+                        android:layout_width="385dp"
+                        android:layout_height="match_parent" />
+
+                    <TableLayout
+                        android:id="@+id/filterLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="#eae8e8">
+
+                        <TableRow>
+                            <CheckBox
+                                android:id="@+id/notAnsweredCheckboxId"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Not Answered" />
+
+                            <CheckBox
+                                android:id="@+id/answeredCheckboxId"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Answered" />
+
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <CheckBox
+                                android:id="@+id/markedForReviewCheckboxId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Marked For Review" />
+
+                            <CheckBox
+                                android:id="@+id/yetToVisitCheckboxId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Yet to Visit " />
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <CheckBox
+                                android:id="@+id/answeredAndMarkedForReviewCheckboxId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:text="Answered and Marked for Review" />
+
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/close_only_question"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Close"
+            android:textColor="@color/color_white"
+            android:textSize="17sp" />
+
+
+
+    </LinearLayout>
+
+
+</layout><!-- <LinearLayout
+             android:id="@+id/tab_specific"
+             android:layout_width="0dp"
+             android:layout_height="0dp"
+             android:layout_weight="0"
+             android:background="@color/popup_bck"
+             android:visibility="visible">
+
+             <Button
+                 android:id="@+id/question_paper_id"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:textColor="@color/whit"
+                 android:text="Questions"
+                 style="?android:attr/buttonBarButtonStyle"/>
+
+             <Button
+                 android:id="@+id/showPaletteId"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:visibility="gone"
+                 android:text="@string/show_palette"
+                 style="?android:attr/buttonBarButtonStyle"/>
+
+             <Button
+                 android:id="@+id/showInstructionId"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:textColor="@color/whit"
+                 android:text="Instructions"
+                 style="?android:attr/buttonBarButtonStyle"/>
+
+         </LinearLayout>
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+
+
+                 <LinearLayout
+                     android:id="@+id/qpalette"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <LinearLayout
+                         android:id="@+id/gridLinearId"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1">
+
+                         <TextView
+                             android:id="@+id/no_items_viewId"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/no_items"
+                             android:visibility="gone"/>
+
+
+                     </LinearLayout>
+
+                     <android.support.v7.widget.RecyclerView
+                         android:id="@+id/onlyQuestionRecyclerViewId"
+                         android:layout_width="match_parent"
+                         android:layout_height="300dp"
+                         android:background="@color/whit"
+                         android:visibility="visible"
+                         android:layout_weight="1"/>
+
+                     <TableLayout
+                         android:id="@+id/filterLayoutId"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="#eae8e8"
+                         android:layout_weight="0">
+                         &lt;!&ndash;relativeId&ndash;&gt;
+
+                         <TableRow>
+                             <CheckBox
+                                 android:id="@+id/notAnsweredCheckboxId"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:text="Not Answered"/>
+
+                             <CheckBox
+                                 android:id="@+id/answeredCheckboxId"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:text="Answered" />
+                             &lt;!&ndash;android:layout_below="@id/notAnsweredCheckboxId"&ndash;&gt;
+                             &lt;!&ndash;android:layout_alignLeft="@id/notAnsweredCheckboxId"&ndash;&gt;
+                             &lt;!&ndash;android:layout_alignStart="@id/notAnsweredCheckboxId"&ndash;&gt;
+
+                         </TableRow>
+                         <TableRow>
+                             <CheckBox
+                                 android:id="@+id/markedForReviewCheckboxId"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:text="Marked For Review"/>
+                             <CheckBox
+                                 android:id="@+id/yetToVisitCheckboxId"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:text="Yet to Visit "/>
+
+                         </TableRow>
+                         <TableRow>
+                             <CheckBox
+                                 android:id="@+id/answeredAndMarkedForReviewCheckboxId"
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:layout_span="2"
+                                 android:text="Answered and Marked for Review"/>
+
+                         </TableRow>
+
+                     </TableLayout>
+
+
+                 </LinearLayout>
+
+
+                 <include layout="@layout/fragment_instruction"
+                     android:visibility="gone"/>
+
+                 &lt;!&ndash;  <include layout="@layout/layout_all_questions"
+                       android:visibility="gone"/>&ndash;&gt;
+
+                 <ScrollView
+                     android:layout_width="match_parent"
+                     android:layout_height="400dp"
+                     android:visibility="gone"
+                     android:id="@+id/scrollbar">
+
+                     <LinearLayout android:layout_width="320dp"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:id="@+id/linerQuestion"
+                         android:visibility="gone"
+                         android:background="#f4f4f4">
+                     </LinearLayout>
+                 </ScrollView>
+
+             </LinearLayout>
+         </ScrollView>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:text="Close"
+             android:paddingBottom="8dp"
+             android:padding="5dp"
+             android:id="@+id/txtClose"
+             android:background="@color/colorPrimary"
+             android:textColor="@color/whit"
+             android:textAlignment="center"/>
+
+ -->
